@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://cloud.aguascalientes.tecnm.mx/site/img/logo.png">
+    <script src="operaciones.js"></script>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');</style> 
+    <title>Calculadora</title>
+</head>
+<body>
+    <div id="contenedor">
+        <header class="titulo"><h1>Calculadora</h1></header>
+        <form name="form" action="">
+            <span>
+                <input type="text" name="PrimerDigito" id="PrimerDigito" maxlength="8" onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;">
+                <label for="PrimerDigito">Ingresa el primer digito</label>
+            </span>
+            <br>
+            <span>
+                <input type="text" name="SegundoDigito" id="SegundoDigito" maxlength="8" onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;">
+                <label for="SegundoDigito">Ingresa el segundo digito</label>
+            </span>
+            <p id="Res">Resultado: 0</p>
+            <span>
+                <input type="button" value="Suma" onclick="suma()">
+            </span>
+            <span>
+                <input type="button" value="Resta" onclick="resta()">
+            </span>
+            <span>
+                <input type="button" value="Multiplicación" onclick="multiplicacion()">
+            </span>
+            <span>
+                <input type="button" value="División" onclick="division()">
+            </span>
+            <br>
+            <input type="reset" value="Borrar" onclick="borrar()">
+        </form>
+    </div>
+</body>
+</html>
